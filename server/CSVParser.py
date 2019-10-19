@@ -56,7 +56,7 @@ class CSVParser:
 
     @staticmethod
     def outputCSV(matches):
-        with open('matchResults\\offerMatchings.csv', 'wb') as csvfile:
+        with open('matchResults\\offerMatchings.csv', 'w', newline='') as csvfile:
             filewriter = csv.writer(csvfile, delimiter=',',
                                     quotechar='|', quoting=csv.QUOTE_MINIMAL)
             filewriter.writerow(['JobID', 'StudentID'])
