@@ -9,7 +9,7 @@ def interviewScheduler():
     #file = request.files['StudentInput_Example']
     files = request.files.getlist('files[]')
     print(files)
-    return files
+    return "success"
 
 @app.route('/getOfferMatches')
 def offerMatches():
