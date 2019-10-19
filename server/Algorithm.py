@@ -119,7 +119,8 @@ class Algorithm:
         self.students_with_offers = set()
         self.performAlgorithm()
 
-        print(self.result)
+        CSVParser.outputCSV(self.result)
+        #print(self.result)
 
         #print("Printing studentQueue")
         #print(self.studentQueue)
