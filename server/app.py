@@ -1,4 +1,4 @@
-from flask import Flask, Response, send_from_directory, send_file
+from flask import Flask, Response, send_from_directory, send_from_directory
 from flask_cors import CORS
 from flask import render_template, request, redirect, url_for
 from werkzeug import secure_filename
@@ -24,8 +24,6 @@ def interviewScheduler():
         p = os.path.join(app.root_path, 'download/' + file.filename)
         file.save(p)
         print(p, flush=True) # debug
-        
-        # append array with download
 
     # call to Algorithm file
     if len(filenameList) >= 2:
@@ -36,16 +34,21 @@ def interviewScheduler():
         # file deletion
         os.remove(filenameList[0])
         os.remove(filenameList[1])
-        return "success"
-
-
-@app.route('/getOfferMatches', methods=['POST'])
-def offerMatches():
-    for file in (request.files['student'], request.files['company']):
-        p = os.path.join(app.root_path, 'download/' + file.filename)
-        file.save(p)
-        print(p, flush=True)
     return "success"
+        
+@app.route('/getOfferMatches', methods=['GET'])
+def offerMatches():
+    file = open('./matchResults/offerMatchings.csv', 'r')
+    returnfile = file.read().encode('latin-1')
+    file.close()
+    return Response(returnfile, mimetype="text/csv", headers = {"Content-disposition": 
+    "attachment; filename=offerMatchings.csv"})
+   
+@app.route('/getInterviewMatch', methods=['GET'])
+def download():
+    return send_from_directory('matchResults', filename='offerMatchings')
+    
+
     #file = request.files['file']
     #file.save(os.path.join(app.root_path, 'download/file.csv'))
     

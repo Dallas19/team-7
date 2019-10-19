@@ -49,15 +49,18 @@ const App = () => {
   const [showDownload, setShowDownload] = useState(false);
 
   const download = () => {
+    // get request
+    
     // fake server request, getting the file url as response
     setTimeout(() => {
       const response = {
-        file: `http://127.0.0.1:5000/getInterviewSchedule`
+        file: `http://127.0.0.1:5000/getInterviewMatch`
       };
       // server sent the url to the file!
       // now, let's download:
-      //window.location.href = response.file;
+      window.location.href = response.file;
       // you could also do:
+
       window.open(response.file);
     }, 100);
   };
