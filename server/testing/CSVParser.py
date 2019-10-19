@@ -4,7 +4,7 @@ import csv
 
 
 class CSVParser:
-
+    # read in 
 
     def parseStudentFile(filename):
         # initializing the titles and rows list
