@@ -16,3 +16,8 @@
 .Button {
   margin: 10px;
 }
+
+.Dropzone {
+  border-style: solid;
+  border-width: 2px;
+}
