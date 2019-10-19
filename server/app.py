@@ -1,19 +1,17 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, send_from_directory
 from flask_cors import CORS
 import os.path
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 CORS(app)
 
 @app.route('/getInterviewSchedule', methods=['POST'])
 def interviewScheduler():
     #file = request.files['StudentInput_Example']
-    #files = request.files.getlist('files[]')
-    #print(files[0])
-    path = "server/testFiles/CompanyInput_Blank.csv"
-    return app.send_static_file(path)
-
+    files = request.files.getlist('files[]')
+    return app.send_static_file("server/testFiles/CompanyInput_Blank.csv")
+    #return str(files)
 
 @app.route('/getOfferMatches')
 def offerMatches():
