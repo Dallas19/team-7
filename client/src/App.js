@@ -76,7 +76,9 @@ const App = () => {
           >
             Interviews
           </Button>
-          <Button className="Button"> Offers </Button>
+          <Button 
+            disabled={!files[0] || !files[1]}
+            className="Button"> Offers </Button>
         </div>
       </header>
     </div>
