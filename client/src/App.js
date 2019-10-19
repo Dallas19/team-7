@@ -24,6 +24,7 @@ const App = () => {
 
   // http post using axios
   const handleSubmit = theFiles => {
+    setShowDownload(true);
     console.log(theFiles);
     axios
       .post(`http://127.0.0.1:5000/getInterviewSchedule`, theFiles)
@@ -31,6 +32,22 @@ const App = () => {
         console.log(res);
         console.log(res.data);
       });
+  };
+
+  const [showDownload, setShowDownload] = useState(false);
+
+  const download = () => {
+    // fake server request, getting the file url as response
+    setTimeout(() => {
+      const response = {
+        file: `http://127.0.0.1:5000/getInterviewSchedule`
+      };
+      // server sent the url to the file!
+      // now, let's download:
+      //window.location.href = response.file;
+      // you could also do:
+      window.open(response.file);
+    }, 100);
   };
 
   return (
@@ -76,10 +93,19 @@ const App = () => {
             disabled={!files[0] || !files[1]}
             className="Button"
             onClick={() => handleSubmit(files)}
-          >Interviews </Button>
-          <Button 
-            disabled={!files[0] || !files[1]}
-            className="Button"> Offers </Button>
+          >Interviews</Button>
+
+          <Button className="Button" disabled={!files[0] || !files[1]}>
+            {" "}
+            Offers{" "}
+          </Button>
+
+          {showDownload && (
+            <Button className="Button" onClick={download}>
+              {" "}
+              Download{" "}
+            </Button>
+          )}
         </div>
       </header>
     </div>
