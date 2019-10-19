@@ -17,7 +17,7 @@ class CSVParser:
         cur_path = os.path.dirname(__file__)
         new_path = os.path.relpath(filename, cur_path)
         # reading csv file
-        with os.open(new_path, 'r') as csvfile:
+        with open(new_path, 'r') as csvfile:
             # creating a csv reader object
             csvreader = csv.reader(csvfile)
 
@@ -42,7 +42,7 @@ class CSVParser:
 
 
         # reading csv file
-        with os.open(new_path, 'r') as csvfile:
+        with open(new_path, 'r') as csvfile:
             # creating a csv reader object
             csvreader = csv.reader(csvfile)
 
@@ -53,3 +53,12 @@ class CSVParser:
             for row in csvreader:
                 rows.append(row)
         return rows
+
+    @staticmethod
+    def outputCSV(matches):
+        with open('matchResults\\offerMatchings.csv', 'wb') as csvfile:
+            filewriter = csv.writer(csvfile, delimiter=',',
+                                    quotechar='|', quoting=csv.QUOTE_MINIMAL)
+            filewriter.writerow(['JobID', 'StudentID'])
+            for match in matches:
+                filewriter.writerow([match[0],match[1]])
