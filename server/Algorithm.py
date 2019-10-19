@@ -105,8 +105,8 @@ class Algorithm:
                 break
 
     def __init__(self, studentFilePath, companyFilePath):
-        self.studentRows = CSVParser.parseStudentFile(studentFilePath)
-        self.companyRows = CSVParser.parseCompanyFile(companyFilePath)
+        self.studentRows = CSVParser.parseFile(studentFilePath)
+        self.companyRows = CSVParser.parseFile(companyFilePath)
 
         self.studentQueue = collections.deque()
         self.studentRankingDict = {}
