@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Dropzone from "react-dropzone";
 
+import axios from "axios";
+
 import "./App.css";
 
 const App = () => {
@@ -13,6 +15,21 @@ const App = () => {
     "Drag or Click to Browse File"
   );
 
+  const [studentFile, setStudentFile] = useState();
+  const [companyFile, setCompanyFile] = useState();
+
+  const files = [studentFile, companyFile];
+
+  const handleSubmit = theFiles => {
+    console.log(theFiles);
+    axios
+      .post(`http://127.0.0.1:5000/getInterviewSchedule`, theFiles)
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      });
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -20,7 +37,10 @@ const App = () => {
         <h4>Student Ranking File</h4>
         <Dropzone
           className="Dropzone"
-          onDrop={acceptedFiles => setStudentFileName(acceptedFiles[0].name)}
+          onDrop={acceptedFiles => {
+            setStudentFile(acceptedFiles[0]);
+            setStudentFileName(acceptedFiles[0].name);
+          }}
         >
           {({ getRootProps, getInputProps }) => (
             <section>
@@ -34,7 +54,10 @@ const App = () => {
         <h4>Company Ranking File</h4>
         <Dropzone
           className="Dropzone"
-          onDrop={acceptedFiles => setCompanyFileName(acceptedFiles[0].name)}
+          onDrop={acceptedFiles => {
+            setCompanyFile(acceptedFiles[0]);
+            setCompanyFileName(acceptedFiles[0].name);
+          }}
         >
           {({ getRootProps, getInputProps }) => (
             <section>
@@ -46,7 +69,10 @@ const App = () => {
           )}
         </Dropzone>
         <div>
-          <Button className="Button"> Interviews </Button>
+          <Button className="Button" onClick={() => handleSubmit(files)}>
+            {" "}
+            Interviews{" "}
+          </Button>
           <Button className="Button"> Offers </Button>
         </div>
       </header>
