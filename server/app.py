@@ -32,7 +32,10 @@ def interviewScheduler():
         studentFilename = filenameList[0]
         companyFilename = filenameList[1]
         algorithm = Algorithm(studentFilename, companyFilename)
-        # file delete
+        
+        # file deletion
+        os.remove(filenameList[0])
+        os.remove(filenameList[1])
         return "success"
 
 
