@@ -44,9 +44,9 @@ const App = () => {
       };
       // server sent the url to the file!
       // now, let's download:
-      window.location.href = response.file;
+      //window.location.href = response.file;
       // you could also do:
-      // window.open(response.file);
+      window.open(response.file);
     }, 100);
   };
 
@@ -93,9 +93,8 @@ const App = () => {
             disabled={!files[0] || !files[1]}
             className="Button"
             onClick={() => handleSubmit(files)}
-          >
-            Interviews
-          </Button>
+          >Interviews</Button>
+
           <Button className="Button" disabled={!files[0] || !files[1]}>
             {" "}
             Offers{" "}
