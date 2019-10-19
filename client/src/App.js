@@ -93,7 +93,6 @@ const App = () => {
             disabled={!files[0] || !files[1]}
             className="Button"
             onClick={() => handleSubmit(files)}
-<<<<<<< HEAD
           >
             Interviews
           </Button>
@@ -108,12 +107,6 @@ const App = () => {
               Download{" "}
             </Button>
           )}
-=======
-          >Interviews </Button>
-          <Button 
-            disabled={!files[0] || !files[1]}
-            className="Button"> Offers </Button>
->>>>>>> 8b5ba78a5aad46d9a9f7d157c967e8d193019c05
         </div>
       </header>
     </div>
