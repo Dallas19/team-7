@@ -16,7 +16,6 @@ class CSVParser:
 
         cur_path = os.path.dirname(__file__)
         new_path = os.path.relpath(filename, cur_path)
-        print(new_path)
         # reading csv file
         with open(new_path, 'r') as csvfile:
             # creating a csv reader object
