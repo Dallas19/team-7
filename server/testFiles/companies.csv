@@ -1,0 +1,101 @@
+rank,company,revenue ($ millions),profit ($ millions)
+1,Walmart,500343.00,9862.00
+2,Exxon Mobil,244363.00,19710.00
+3,Berkshire Hathaway,242137.00,44940.00
+4,Apple,229234.00,48351.00
+5,UnitedHealth Group,201159.00,10558.00
+6,McKesson,198533.00,5070.00
+7,CVS Health,184765.00,6622.00
+8,Amazon.com,177866.00,3033.00
+9,AT&T,160546.00,29450.00
+10,General Motors,157311.00,-3864.00
+11,Ford Motor,156776.00,7602.00
+12,AmerisourceBergen,153143.80,364.5
+13,Chevron,134533.00,9195.00
+14,Cardinal Health,129976.00,1288.00
+15,Costco,129025.00,2679.00
+16,Verizon,126034.00,30101.00
+17,Kroger,122662.00,1907.00
+18,General Electric,122274.00,-5786.00
+19,Walgreens Boots Alliance,118214.00,4078.00
+20,JPMorgan Chase,113899.00,24441.00
+21,Fannie Mae,112394.00,2463.00
+22,Alphabet,110855.00,12662.00
+23,Home Depot,100904.00,8630.00
+24,Bank of America Corp.,100264.00,18232.00
+25,Express Scripts Holding,100064.60,4517.40
+26,Wells Fargo,97741.00,22183.00
+27,Boeing,93392.00,8197.00
+28,Phillips 66,91568.00,5106.00
+29,Anthem,90039.40,3842.80
+30,Microsoft,89950.00,21204.00
+31,Valero Energy,88407.00,4065.00
+32,Citigroup,87966.00,-6798.00
+33,Comcast,84526.00,22714.00
+34,IBM,79139.00,5753.00
+35,Dell Technologies,78660.00,-3728.00
+36,State Farm Insurance Cos.,78330.80,2206.50
+37,Johnson & Johnson,76450.00,1300.00
+38,Freddie Mac,74676.00,5625.00
+39,Target,71879.00,2934.00
+40,Lowe’s,68619.00,3447.00
+41,Marathon Petroleum,67610.00,3432.00
+42,Procter & Gamble,66217.00,15326.00
+43,MetLife,66153.00,4010.00
+44,UPS,65872.00,4910.00
+45,PepsiCo,63525.00,4857.00
+46,Intel,62761.00,9601.00
+47,DowDuPont,62683.00,1460.00
+48,Archer Daniels Midland,60828.00,1595.00
+49,Aetna,60535.00,1904.00
+50,FedEx,60319.00,2997.00
+51,United Technologies,59837.00,4552.00
+52,Prudential Financial,59689.00,7863.00
+53,Albertsons Cos.,59678.20,-373.3
+54,Sysco,55371.10,1142.50
+55,Disney,55137.00,8980.00
+56,Humana,53767.00,2448.00
+57,Pfizer,52546.00,21308.00
+58,HP,52056.00,2526.00
+59,Lockheed Martin,51048.00,2002.00
+60,AIG,49520.00,-6084.00
+61,Centene,48572.00,828
+62,Cisco Systems,48005.00,9609.00
+63,HCA Healthcare,47653.00,2216.00
+64,Energy Transfer Equity,47487.00,954
+65,Caterpillar,45462.00,754
+66,Nationwide,43939.90,246.5
+67,Morgan Stanley,43642.00,6111.00
+68,Liberty Mutual Insurance Group,42687.00,17
+69,New York Life Insurance,42296.00,1866.90
+70,Goldman Sachs Group,42254.00,4286.00
+71,American Airlines Group,42207.00,1919.00
+72,Best Buy,42151.00,1000.00
+73,Cigna,41616.00,2237.00
+74,Charter Communications,41581.00,9895.00
+75,Delta Air Lines,41244.00,3577.00
+76,Facebook,40653.00,15934.00
+77,Honeywell International,40534.00,1655.00
+78,Merck,40122.00,2394.00
+79,Allstate,38524.00,3189.00
+80,Tyson Foods,38260.00,1774.00
+81,United Continental Holdings,37736.00,2131.00
+82,Oracle,37728.00,9335.00
+83,Tech Data,36775.00,116.6
+84,TIAA,36025.30,1049.70
+85,TJX,35864.70,2607.90
+86,American Express,35583.00,2736.00
+87,Coca-Cola,35410.00,1248.00
+88,Publix Super Markets,34836.80,2291.90
+89,Nike,34350.00,4240.00
+90,Andeavor,34204.00,1528.00
+91,World Fuel Services,33695.50,-170.2
+92,Exelon,33531.00,3770.00
+93,Massachusetts Mutual Life Insurance,33495.40,513
+94,Rite Aid,32845.10,4.1
+95,ConocoPhillips,32584.00,-855
+96,CHS,31934.80,127.9
+97,3M,31657.00,4858.00
+98,Time Warner,31271.00,5247.00
+99,General Dynamics,30973.00,2912.00
+100,USAA,30015.80,2421.90
