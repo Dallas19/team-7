@@ -23,7 +23,7 @@ const App = () => {
   const files = [studentFile, companyFile];
 
   
-  // http post using axios
+  // POST for SCHEDULING
   const handleSubmit = theFiles => {
     setShowDownload(true);
     console.log(theFiles);
@@ -36,20 +36,15 @@ const App = () => {
         'Content-Type': 'multipart/form-data'
       }
     })
+    
     .then(res => {
+      // get file from response file
       console.log(res);
       console.log(res.data);
     });
-    /*
-    axios
-      .post(`http://127.0.0.1:5000/getInterviewSchedule`, theFiles)
-      .then(res => {
-        console.log(res);
-        console.log(res.data);
-      });
-      */
-      // formdata - name, file object, and filename 
   };
+
+
 
   const [showDownload, setShowDownload] = useState(false);
 
@@ -112,15 +107,16 @@ const App = () => {
             onClick={() => handleSubmit(files)}
           >Interviews</Button>
 
-          <Button className="Button" disabled={!files[0] || !files[1]}>
-            {" "}
-            Offers{" "}
+          <Button 
+            className="Button" 
+            disabled={!files[0] || !files[1]}
+            onClick={() => handleSubmit(files)}>
+            Offers
           </Button>
 
           {showDownload && (
             <Button className="Button" onClick={download}>
-              {" "}
-              Download{" "}
+              Download
             </Button>
           )}
         </div>
