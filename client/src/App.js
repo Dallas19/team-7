@@ -7,6 +7,7 @@ import axios from "axios";
 
 import "./App.css";
 
+// file drop/upload
 const App = () => {
   const [studentFileName, setStudentFileName] = useState(
     "Drag or Click to Browse File"
@@ -15,11 +16,13 @@ const App = () => {
     "Drag or Click to Browse File"
   );
 
+  // defining pairs of files
   const [studentFile, setStudentFile] = useState();
   const [companyFile, setCompanyFile] = useState();
 
   const files = [studentFile, companyFile];
 
+  // http post using axios
   const handleSubmit = theFiles => {
     console.log(theFiles);
     axios
@@ -73,9 +76,7 @@ const App = () => {
             disabled={!files[0] || !files[1]}
             className="Button"
             onClick={() => handleSubmit(files)}
-          >
-            Interviews
-          </Button>
+          >Interviews </Button>
           <Button 
             disabled={!files[0] || !files[1]}
             className="Button"> Offers </Button>
