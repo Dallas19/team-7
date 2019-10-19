@@ -46,7 +46,7 @@ def offerMatches():
    
 @app.route('/getInterviewMatch', methods=['GET'])
 def download():
-    return send_from_directory('matchResults', filename='offerMatchings')
+    return send_from_directory('matchResults', filename='offerMatchings.csv')
     
 
     #file = request.files['file']
