@@ -69,9 +69,12 @@ const App = () => {
           )}
         </Dropzone>
         <div>
-          <Button className="Button" onClick={() => handleSubmit(files)}>
-            {" "}
-            Interviews{" "}
+          <Button
+            disabled={!files[0] || !files[1]}
+            className="Button"
+            onClick={() => handleSubmit(files)}
+          >
+            Interviews
           </Button>
           <Button className="Button"> Offers </Button>
         </div>
