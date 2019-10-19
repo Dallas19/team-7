@@ -22,16 +22,33 @@ const App = () => {
 
   const files = [studentFile, companyFile];
 
+  
   // http post using axios
   const handleSubmit = theFiles => {
     setShowDownload(true);
     console.log(theFiles);
+    // create formData object
+    var formData = new FormData();
+    formData.append("student", theFiles[0]);
+    formData.append("company", theFiles[1]);
+    axios.post('http://127.0.0.1:5000/getInterviewSchedule', formData, {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    })
+    .then(res => {
+      console.log(res);
+      console.log(res.data);
+    });
+    /*
     axios
       .post(`http://127.0.0.1:5000/getInterviewSchedule`, theFiles)
       .then(res => {
         console.log(res);
         console.log(res.data);
       });
+      */
+      // formdata - name, file object, and filename 
   };
 
   const [showDownload, setShowDownload] = useState(false);
